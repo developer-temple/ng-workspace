@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { DtFlexContainerModule } from  'dt-ui';
+import {
+  DtUiModule
+} from  'dt-ui';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,7 @@ import { DtFlexContainerModule } from  'dt-ui';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DtFlexContainerModule
+    DtUiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

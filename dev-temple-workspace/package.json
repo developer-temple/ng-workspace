@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "pre-build-libs": "Rmdir /S dist",
+    "build-libs:support": "ng build dt-static --prod && npm i dist/dt-static && ng build dt-enum --prod && npm i dist/dt-enum",
+    "build-libs:ui": "ng build dt-ui --prod && npm i dist/dt-ui"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +25,7 @@
     "dt-enum": "file:dist/dt-enum",
     "dt-static": "file:dist/dt-static",
     "dt-ui": "file:dist/dt-ui",
+    "rimraf": "^3.0.2",
     "rxjs": "~6.5.5",
     "test": "file:dist/test",
     "tslib": "^2.0.0",
